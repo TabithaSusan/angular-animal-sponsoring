@@ -1,50 +1,37 @@
-<h1 class="text">Kategorien</h1>
+<h1 class="text">Photos</h1>
+
+<p>fbuwienompo,ü <br>
+    rctzvubinm<br>
+    ctzvubino<br>
+    tzubinom
+</p>
 
 <div class="container-fluid">
-    <div class=table>
-        <table>
-            <tr>
-                <td> <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/animal-shelter']">Animal Shelter</button> </td>
-                <td> <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/animal-sanctuary']">Animal Sanctuary</button> </td>
-                <td> <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/zoo']">Zoo</button> </td>
-            </tr>
-            <tr>
-                <td> 
-                    <div class="pics">            
-                        <img alt="pic1" id ="one" src="" style="width:600px">
-                    </div> 
-                </td>
-                <td> 
-                    <div class="pics">            
-                        <img alt="pic1" id ="one" src="" style="width:600px">
-                    </div>
-                </td>
-                <td> 
-                    <div class="pics">            
-                        <img alt="pic1" id ="one" src="" style="width:600px">
-                    </div> 
-                </td>
-            </tr>
-            <tr>
-                <td> 
-                    <div class="pics">            
-                        <img alt="pic1" id ="one" src="" style="width:600px">
-                    </div> 
-                </td>
-                <td> 
-                    <div class="pics">            
-                        <img alt="pic1" id ="one" src="" style="width:600px">
-                    </div>
-                </td>
-                <td> 
-                    <div class="pics">            
-                        <img alt="pic1" id ="one" src="" style="width:600px">
-                    </div> 
-                </td>
-            </tr>
-            <tr>
-                <td> <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/kurzgeschichten']">Kurzgeschichten</button> </td>
-            </tr>
-        </table>
+    <div class=Buttons>
+        <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/animal-shelter']">Animal Shelter</button>
+        <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/animal-sanctuary']">Animal Sanctuary</button>
+        <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/zoo']">Zoo</button>
     </div>
+    
+    <div *ngFor="let photo of PhotoGallery">    
+        <table>
+          <tr>
+            <td id="spalte1"> 
+                <img alt={{photo.Species}} src="{{photo.Pic}}" align="left" style="padding-right: 10px; width:240px "> 
+            </td>
+            <td id="spalte2">
+            <!--  <h3> {{buch.Titel}} </h3>
+              <h4> {{buch.Autor}} </h4>
+              <article>{{buch.Inhalt}}</article> -->
+            </td>
+            <td id="spalte3">
+              <h2>inkl. MwSt.</h2> 
+             <!-- <p id = "preis"> {{buch.Preis}} €</p>
+              <h2> Früher: </h2>
+              <p id = "standartpreis"> {{buch.StandartPreis}} €</p>  -->
+              <button type="button" class="btn btn-primary">In den Einkaufswagen</button></td>
+            </tr>
+        </table> 
+      </div>
+    
 </div>
