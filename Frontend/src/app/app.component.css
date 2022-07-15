@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Varela+Round');
-html, body {
-    overflow-x: hidden;
-    height: 100%;
+:host {
+   display: flex;
+   flex-direction: column;
 }
-body {
-    background: #fff;
-    padding: 0;
-    margin: 0;
-    font-family: 'Varela Round', sans-serif;
-}
+
+:host router-outlet {
+    flex: 1 1 100%;
+   }
