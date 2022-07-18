@@ -8,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotoGalleryComponent implements OnInit {
 
+  PhotoGallery: any;
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.getPhotoGallery();
   }
-
-  PhotoGallery: any;
+  
 
   getPhotoGallery() {
     return this.http.get("PhotoGallery").subscribe(x => {
