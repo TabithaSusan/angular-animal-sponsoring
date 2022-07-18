@@ -1,24 +1,29 @@
 h1 {
     font-size: 40px;
+    padding-left: 190px;
+    padding-bottom: 15px;
 }
 
 .box {
-    float: left;
+    display: flex;
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 5%;
 }
 
 img {
-    width: 30%;
+    width: 350px;
+    height: 350px;
+    ;
 }
 
 .right {
-    float: left;
+    width: 20%;
+    padding-right: 100px;
 }
 
 .left {
-    float: left;
+    flex: 1;
 }
 
 form {
