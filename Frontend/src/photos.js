@@ -6,7 +6,7 @@ function createRouter(db) {
 
   
   router.post('/PhotoGallery', (req, res, next) => {
-    database.query(
+    db.query(
       'INSERT INTO PhotoGallery VALUES(?, ?, ?, ?, ?, ?, ?)',
       [req.body.ID, req.body.Species, req.body.Location, req.body.Likes, req.body.Pic, req.body.Tag1, req.body.Tag2],
       (error) => {
@@ -21,7 +21,7 @@ function createRouter(db) {
   });
 
   router.get('/PhotoGallery', function (req, res, next) {
-    database.query(
+    db.query(
       'SELECT * FROM PhotoGallery',  // ORDER BY Species',
       [10*(req.params.page || 0)],
       (error, results) => {
@@ -36,8 +36,8 @@ function createRouter(db) {
   });
   
   router.put('/PhotoGallery/:Species', function (req, res, next) {
-    database.query(
-      'UPDATE buecher SET ID=?, Species=?, Location=?, Likes=?, Pic=?, Tag1=?, Tag2=? WHERE Species=?',
+    db.query(
+      'UPDATE PhotoGallery SET ID=?, Species=?, Location=?, Likes=?, Pic=?, Tag1=?, Tag2=? WHERE Species=?',
       [req.body.ID, req.body.Species, req.body.Location, req.body.Likes, req.body.Pic, req.body.Tag1, req.body.Tag2],
       (error) => {
         if (error) {
@@ -50,7 +50,7 @@ function createRouter(db) {
   });
 
   router.delete('/PhotoGallery/:Species', function (req, res, next) {
-    database.query(
+    db.query(
       'DELETE FROM PhotoGallery WHERE Species=?',
       [req.params.Titel],
       (error) => {

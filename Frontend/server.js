@@ -1,17 +1,15 @@
- // set up ======================== 
  var express  = require('express'); 
- var app      = express();                              
+ var app      = express();                               
  var path     = require('path'); 
  var mysql    = require('mysql'); 
  const { Console } = require('console');
 
 
-  app.use(express.static(path.join(__dirname, '/dist/angular-animal-sponsering')));  
+ app.use(express.static(path.join(__dirname, '/dist/angular-animal-sponsering-app')));  
  
-  app.get('/', function(req,res) 
+ app.get('/', function(req,res) 
  {     
-      
-      res.sendFile('index.html', { root: __dirname + '/dist/angular-animal-sponsering' });             
+      res.sendFile('index.html', { root: __dirname + '/dist/angular-animal-sponsering-app' });             
  });
 
  app.get('/PhotoGallery', function(req,res) 
