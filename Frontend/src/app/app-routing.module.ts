@@ -14,7 +14,7 @@ import { SponsorshipComponent } from './sponsorship/sponsorship.component';
 import { ZooComponent } from './zoo/zoo.component';
 
 const routes: Routes = [
- 
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'donation', component: DonationComponent},
   {path: 'sponsorship', component: SponsorshipComponent},
