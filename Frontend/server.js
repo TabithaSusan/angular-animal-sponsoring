@@ -1,19 +1,17 @@
  // set up ======================== 
  var express  = require('express'); 
- var app      = express();                               // create our app w/ express 
+ var app      = express();                              
  var path     = require('path'); 
  var mysql    = require('mysql'); 
  const { Console } = require('console');
 
 
- // configuration =================
-  app.use(express.static(path.join(__dirname, '/dist/angular-animal-sponsoring')));  
+  app.use(express.static(path.join(__dirname, '/dist/angular-animal-sponsering')));  
  
- // application -------------------------------------------------------------
   app.get('/', function(req,res) 
  {     
-      //res.send("Hello World123");     
-      res.sendFile('index.html', { root: __dirname + '/dist/angular-animal-sponsoring' });             
+      
+      res.sendFile('index.html', { root: __dirname + '/dist/angular-animal-sponsering' });             
  });
 
  app.get('/PhotoGallery', function(req,res) 
@@ -45,8 +43,6 @@
      });
 });
 
-
- // listen (start app with node server.js) ======================================
 app.listen(4200, function () {
      console.log("App listening on port 4200");
 });
