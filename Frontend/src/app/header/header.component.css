@@ -162,12 +162,16 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
 
 /* ################# */
 
+.nav-right {
+    position: relative;
+    top: -95px;
+}
+
 .nav-right ul {
     list-style: none;
     background: inherit;
     padding: 0;
-    margin: 0 20px;
-    position: sticky;
+    margin: 0 0px;
     text-align: right;
 }
 
@@ -180,7 +184,7 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
     text-decoration: none;
     color: #f2f2f2;
     display: block;
-    padding: 0 20px;
+    padding: 0 0px;
     margin: 20px 30px;
     text-transform: uppercase;
     text-align: center;
@@ -257,7 +261,7 @@ place-items: center;
     height: 120px;
     z-index: 1;
     background: transparent;
-    top: -25px;
+    top: -130px;
     left: 45px;
     position: relative;
 }
