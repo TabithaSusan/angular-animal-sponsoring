@@ -29,12 +29,37 @@ form {
     table-layout: auto;
 }
 
+.input-text {
+    width: 200px;
+}
+
 .firstInputInRow {
     margin-right: 10px;
 }
 
-.labelDistance {
-    padding-right: 15px;
+.labelDistanceLow {
+    padding-right: 10px;
+    width: 200px;
+}
+
+.labelDistanceRatherLow {
+    padding-right: 13px;
+}
+
+.labelDistanceMediumLow {
+    padding-right: 40px;
+}
+
+.labelDistanceMedium {
+    padding-right: 57px;
+}
+
+.labelDistanceHigh {
+    padding-right: 71px;
+}
+
+.labelDistanceHighTweak {
+    padding-right: 73px;
 }
 
 .btnSubmit {
