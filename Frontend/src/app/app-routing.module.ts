@@ -12,6 +12,13 @@ import { NewsComponent } from './news/news.component';
 import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
 import { SponsorshipComponent } from './sponsorship/sponsorship.component';
 import { ZooComponent } from './zoo/zoo.component';
+import { Error404Component } from './error404/error404.component';
+import { ErrorAdoptionComponent } from './error-adoption/error-adoption.component';
+import { ErrorDonationComponent } from './error-donation/error-donation.component';
+import { ErrorSponsorshipComponent } from './error-sponsorship/error-sponsorship.component';
+import { SuccessAdoptionComponent } from './success-adoption/success-adoption.component';
+import { SuccessDonationComponent } from './success-donation/success-donation.component';
+import { SuccessSponsorshipComponent } from './success-sponsorship/success-sponsorship.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -27,6 +34,13 @@ const routes: Routes = [
   {path: 'animal-shelter', component: AnimalShelterComponent},
   {path: 'animal-sanctuary', component: AnimalSanctuaryComponent},
   {path: 'zoo', component: ZooComponent},
+  {path: 'error404', component: Error404Component},
+  {path: 'error-adoption', component: ErrorAdoptionComponent},
+  {path: 'error-donation', component: ErrorDonationComponent},
+  {path: 'error-sponsorship', component: ErrorSponsorshipComponent},
+  {path: 'success-adoption', component: SuccessAdoptionComponent},
+  {path: 'success-donation', component: SuccessDonationComponent},
+  {path: 'success-sponsorship', component: SuccessSponsorshipComponent},
 ];
 
 @NgModule({

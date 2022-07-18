@@ -22,6 +22,13 @@ import { LegalDisComponent } from './legal-dis/legal-dis.component';
 import { AnimalShelterComponent } from './animal-shelter/animal-shelter.component';
 import { AnimalSanctuaryComponent } from './animal-sanctuary/animal-sanctuary.component';
 import { ZooComponent } from './zoo/zoo.component';
+import { SuccessDonationComponent } from './success-donation/success-donation.component';
+import { SuccessAdoptionComponent } from './success-adoption/success-adoption.component';
+import { SuccessSponsorshipComponent } from './success-sponsorship/success-sponsorship.component';
+import { Error404Component } from './error404/error404.component';
+import { ErrorDonationComponent } from './error-donation/error-donation.component';
+import { ErrorAdoptionComponent } from './error-adoption/error-adoption.component';
+import { ErrorSponsorshipComponent } from './error-sponsorship/error-sponsorship.component';
 
 
 
@@ -41,7 +48,14 @@ import { ZooComponent } from './zoo/zoo.component';
     LegalDisComponent,
     AnimalShelterComponent,
     AnimalSanctuaryComponent,
-    ZooComponent
+    ZooComponent,
+    SuccessDonationComponent,
+    SuccessAdoptionComponent,
+    SuccessSponsorshipComponent,
+    Error404Component,
+    ErrorDonationComponent,
+    ErrorAdoptionComponent,
+    ErrorSponsorshipComponent
   ],
   imports: [
     BrowserModule,
