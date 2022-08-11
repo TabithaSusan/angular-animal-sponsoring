@@ -23,17 +23,15 @@
                     Choose Animal Species you want to sponsor
                 </h2>
                 <select name="animalSpeciesSponsorship" id="animalSpeciesSponsorship">
-                <option>
-                    
-                </option>
-           </select>
+                    <option>
+                                        
+                    </option>
+                </select>
 
-                <h2>Select to available Locations</h2>
+                <h2 >Select to available Locations</h2>
                 <select name="animalSponsorshipLocation" id="animalSponsorshipLocation">
-                <option>
-
-                </option>
-            </select>
+                    <option *ngFor="let location of Location" value="location">{{location.LocationName}}</option>
+                </select>
 
                 <h2>Choose Sponsorship Level</h2>
 

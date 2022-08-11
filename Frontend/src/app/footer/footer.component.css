@@ -76,7 +76,7 @@ font-size: 12pt;
 /* ################## */
 
 .footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
     background: #008C8C;

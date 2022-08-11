@@ -14,11 +14,16 @@
       <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/zoo']">Zoo</button>
   </div>
   
-  <p>fbuwienompü <br>
-    rctzvubinm<br>
-    ctzvubino
-  </p>
-  <div *ngFor="let photo of PhotoGallery">    
+  <div *ngFor="let photo of PhotoGallery" class="pics">    
+    <div layout="row" layout-xs="column">
+      <div flex>
+        <p><img alt={{photo.Species}} src="{{photo.Pic}}" align="left" style="padding-right: 10px; width:240px "></p>
+        <p>{{photo.Species}}</p>
+        <p>{{photo.Location}}</p>
+        <p>{{photo.Likes}}</p>
+      </div>
+    </div>
+<!--
     <table>
       <tr>
         <td id="spalte1"> 
@@ -28,18 +33,19 @@
             <p>{{photo.Likes}}</p>
         </td>
         <td id="spalte2">
-        <!--  <h3> {{}} </h3>
+          <h3> {{}} </h3>
           <h4> {{}} </h4>
-          <article>{{}}</article> -->
+          <article>{{}}</article> 
         </td>
         <td id="spalte3">
           <h2>;-P</h2> 
-          <!-- <p id = ""> {{}} </p>
+          <p id = ""> {{}} </p>
           <h2> Früher: </h2>
-          <p id = ""> {{}} </p>  -->
+          <p id = ""> {{}} </p>  
           <button type="button" class="btn btn-primary">;-P</button></td>
         </tr>
     </table> 
+  -->
   </div>
 
 
