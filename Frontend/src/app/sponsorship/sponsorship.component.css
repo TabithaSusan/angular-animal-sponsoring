@@ -12,14 +12,13 @@ h1 {
 }
 
 img {
-    width: 350px;
+    width: 380px;
     height: 350px;
-    ;
 }
 
 .right {
     width: 20%;
-    padding-right: 100px;
+    padding-right: 130px;
 }
 
 .left {
@@ -30,12 +29,37 @@ form {
     table-layout: auto;
 }
 
+.input-text {
+    width: 200px;
+}
+
 .firstInputInRow {
     margin-right: 10px;
 }
 
-.labelDistance {
-    padding-right: 15px;
+.labelDistanceLow {
+    padding-right: 10px;
+    width: 200px;
+}
+
+.labelDistanceRatherLow {
+    padding-right: 13px;
+}
+
+.labelDistanceMediumLow {
+    padding-right: 40px;
+}
+
+.labelDistanceMedium {
+    padding-right: 57px;
+}
+
+.labelDistanceHigh {
+    padding-right: 71px;
+}
+
+.labelDistanceHighTweak {
+    padding-right: 73px;
 }
 
 .btnSubmit {
@@ -45,4 +69,24 @@ form {
     text-align: center;
     font-size: 20px;
     padding: 10px;
+}
+
+.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    border-style: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #008C8C;
+    margin-bottom: 10px;
+    margin-left: 28%;
+}
+
+.centerbtn {
+    position: relative;
+    padding-left: 25%;
 }
