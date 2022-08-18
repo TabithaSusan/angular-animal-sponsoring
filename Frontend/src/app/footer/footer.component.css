@@ -1,6 +1,6 @@
 
 .footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background: #008C8C;
