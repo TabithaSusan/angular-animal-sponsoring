@@ -37,18 +37,6 @@
                   console.log("Disconnected!");
                 });
           });
-
-          con.query("SELECT * FROM Location", function (err, results, fields) {
-               if (err) throw err;
-                console.log(results);
-                res.send(results);
-          
-                con.end(function (err) {
-                  if (err) throw err;
-                  console.log("Disconnected!");
-                });
-          });
-
      });
 });
 
