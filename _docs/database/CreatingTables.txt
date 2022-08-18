@@ -187,3 +187,15 @@ CHANGE COLUMN `FacilityID` `FacilityID` INT(11) NOT NULL AUTO_INCREMENT ;
 
 ALTER TABLE `22_AWD_Gruppe1`.`SponsorTyp` 
 CHANGE COLUMN `SponsorClass` `SponsorClass` VARCHAR(255) NULL DEFAULT NULL ;
+
+ALTER TABLE `22_AWD_Gruppe1`.`Sponsorships` 
+ADD COLUMN `SponsorTypID` INT NULL AFTER `AnimalsID`,
+ADD INDEX `SponsorTypID_idx` (`SponsorTypID` ASC);
+;
+ALTER TABLE `22_AWD_Gruppe1`.`Sponsorships` 
+ADD CONSTRAINT `SponsorTypID`
+  FOREIGN KEY (`SponsorTypID`)
+  REFERENCES `22_AWD_Gruppe1`.`SponsorTyp` (`SponsortTypID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
