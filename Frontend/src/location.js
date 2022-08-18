@@ -1,6 +1,6 @@
 const express = require('express');
 
-function createRouter(database) {
+function createRouter2(database) {
   const router = express.Router();
   const owner = '';
 
@@ -66,4 +66,4 @@ function createRouter(database) {
   return router;
 }
 
-module.exports = createRouter;
+module.exports = createRouter2;
