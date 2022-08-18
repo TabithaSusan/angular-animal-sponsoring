@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SponsorshipComponent implements OnInit {
 
-  constructor() { }
+  Location: any;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getLocation();
   }
+  
+
+  getLocation() {
+    return this.http.get("Location").subscribe(x => {
+      this.Location = x;
+    }
+  )}
 
 }
