@@ -1,0 +1,56 @@
+.body {
+  position: sticky;
+  padding: 100px;
+  width: 300px;
+  margin-left: 40%;
+  display: inline-block;
+  border: none;
+  background: #F2B705;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+  font-weight: 600;
+}
+p {
+  text-align: center;
+  color: #000000;
+  font-size: 14pt;
+
+}
+
+
+
+
+.goHome {
+  background-color: #008C8C;
+  border: none;
+  color: #f2f2f2;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px 2px;
+  margin-top: 30%;
+  margin-left: 30%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  align-items: center;
+
+}
+
+.goHome {
+  background-color: #f2f2f2;
+  color: black;
+  border: 2px solid #008C8C;
+}
+
+.goHome:hover {
+  background-color: #008C8C;
+  color: #f2f2f2;
+}
