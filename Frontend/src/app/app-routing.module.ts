@@ -20,6 +20,7 @@ import { SuccessAdoptionComponent } from './success-adoption/success-adoption.co
 import { SuccessDonationComponent } from './success-donation/success-donation.component';
 import { SuccessSponsorshipComponent } from './success-sponsorship/success-sponsorship.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -42,7 +43,8 @@ const routes: Routes = [
   {path: 'success-adoption', component: SuccessAdoptionComponent},
   {path: 'success-donation', component: SuccessDonationComponent},
   { path: 'success-sponsorship', component: SuccessSponsorshipComponent },
-  {path:'sign-up', component:SignUpComponent},
+  { path: 'sign-up', component: SignUpComponent },
+  {path: 'sign-in', component: SignInComponent},
 ];
 
 @NgModule({

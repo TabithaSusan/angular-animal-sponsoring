@@ -30,6 +30,7 @@ import { ErrorDonationComponent } from './error-donation/error-donation.componen
 import { ErrorAdoptionComponent } from './error-adoption/error-adoption.component';
 import { ErrorSponsorshipComponent } from './error-sponsorship/error-sponsorship.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 
@@ -57,7 +58,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     ErrorDonationComponent,
     ErrorAdoptionComponent,
     ErrorSponsorshipComponent,
-    SignUpComponent
+    SignUpComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
