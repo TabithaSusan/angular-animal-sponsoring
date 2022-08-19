@@ -12,8 +12,8 @@
 
 
 
-            <p>You are on the search for doing something good, or finding the right present for that special Person? This present would be a sustainable present, that not only will this directly affect the the animal but also would warm someones heart knowing
-                they are affecting that animals life.
+            <p>You are on the search for doing something good, or finding the right present for that special Person? This present would be a sustainable, and will directly affect the the animal but also would warm someones heart knowing they are doing something
+                for the greater good.
                 <br> With your gift sponsorship, you help us to ensure that the animals in our care receive species-appropriate housing, care and attention for the rest of their lives. Whether bear, horse, dog, monkey, parrot, pig, sheep or wild animal
                 - there is the right godmother for every animal lover. Find out more about the individual sponsored animals and sponsored projects or sign up for a sponsorship directly.
             </p>
@@ -23,62 +23,66 @@
                     Choose Animal Species you want to sponsor
                 </h2>
                 <select name="animalSpeciesSponsorship" id="animalSpeciesSponsorship">
-                    <option>
-                                        
-                    </option>
+                    <option *ngFor="let animalTyp of AnimalTyp" value="animalTyp">{{animalTyp.AnimalTyp}}</option>
                 </select>
-
+                <br>
+                <br>
                 <h2 >Select to available Locations</h2>
                 <select name="animalSponsorshipLocation" id="animalSponsorshipLocation">
-                    <option *ngFor="let location of Location" value="location">{{location.LocationName}}</option>
+                    <option *ngFor="let facility of Facilities" value="facility">{{facility.Name}}</option>
                 </select>
 
+                <br>
+                <br>
                 <h2>Choose Sponsorship Level</h2>
+
                 <input type="radio" name="firstLevel" id="sponsorshipLevel" value="First Level. 40,-€">
-                <label>Name on plaque by enclousre, quartly update on Animal including Photos</label>
+                <label>Name on plaque by enclousre, quartly update on Animal including Photo. 40.-€</label>
                 <br>
                 <input type="radio" name="secondLevel" id="sponsorshipLevel" value="Second Level. 75,-€">
-                <label>Name on plaque by enclousre, quartly update on Animal including Photo. Able to choose the Name of the Animal.</label>
+                <label>Name on plaque by enclousre, quartly update on Animal including Photo. Able to choose the Name of the Animal. 75.-€</label>
                 <br>
                 <input type="radio" name="thirdLevel" id="sponsorshipLevel" value="Third Level. 100,-€">
-                <label>Name on plaque by enclousre, quartly update on Animal including Photo. Able to choose the Name of the Animal. Meeting the Animal at first visit at Location.</label>
+                <label>Name on plaque by enclousre, quartly update on Animal including Photo. Able to choose the Name of the Animal. Meeting the Animal at first visit at Location. 100.-€</label>
                 <br>
-                <h2>Will this be a present?</h2>
+                <br>
+                <!--<h2>Will this be a present?</h2>
                 <input type="radio" name="isPresent" id="sponsorshipPresent" value="Yes, this will be a present">
                 <label>Yes, this will be a present.</label>
                 <br>
                 <input type="radio" name="noPresent" id="sponsorshipPresent" value="No, this will be for myself">
                 <label>No, this will be for myself.</label>
-
+                <br>
+                <br> -->
                 <h2>
                     Please enter the contact Information for the Person
                 </h2>
-                <label class="labelDistance">Name</label>
-                <input type="text" name="name" id="textInput" class="firstInputInRow">
+                <label class="labelDistanceHigh">Name</label>
+                <input type="text" name="name" id="textInput" class="firstInputInRow input-text ">
 
 
-                <label class="labelDistance">Surname</label>
-                <input type="text" name="surname" id="textInput">
+                <label class="labelDistanceMediumLow">Surname</label>
+                <input type="text" name="surname" id="textInput" class="input-text ">
                 <br>
 
-                <label class="labelDistance">Street</label>
-                <input type="text" name="street" id="textInput" class="firstInputInRow">
+                <label class="labelDistanceHigh">Street</label>
+                <input type="text" name="street" id="textInput" class="firstInputInRow input-text ">
 
-                <label class="labelDistance">Housnumber</label>
-                <input type="text" name="street" id="textInput">
+                <label class="labelDistanceRatherLow">Housnumber</label>
+                <input type="text" name="street" id="textInput" class="input-text ">
                 <br>
 
-                <label class="labelDistance">Zipcode</label>
-                <input type="number" name="zipcode" id="textInput" class="firstInputInRow">
+                <label class="labelDistanceMedium">Zipcode</label>
+                <input type="number" name="zipcode" id="textInput" class="firstInputInRow input-text ">
 
-                <label class="labelDistance">City</label>
-                <input type="text" name="city" id="textInput">
+                <label class="labelDistanceHighTweak">City</label>
+                <input type="text" name="city" id="textInput" class="input-text ">
                 <br>
 
-                <label class="labelDistance">E-Mail Address</label>
-                <input type="email" name="email" id="textInput">
+                <label class="labelDistanceLow">E-Mail Address</label>
+                <input type="email" name="email" id="textInput" class="input-text ">
                 <br>
-
+                <br>
                 <h2>Choose Payment Method</h2>
 
                 <input type="radio" name="visa" id="paymentMethod" value="Visa">
@@ -96,7 +100,8 @@
                 <label>All Sponsorship Documents will be digital. There will not be any physical Documents sent to your Address. Please keep this in mind!</label>
                 <br>
                 <br>
-                <input type="submit" value="Place Sponsorship" class="btnSubmit">
+                <a href="/success-sponsorship" class="button">Place Sponsorship</a>
+                <!--<input type="submit" value="Place Sponsorship" class="btnSubmit">-->
 
             </form>
         </div>
