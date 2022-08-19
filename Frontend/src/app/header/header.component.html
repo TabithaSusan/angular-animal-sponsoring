@@ -7,7 +7,13 @@
     <ul class="nav-right">
         <li style="float:right"><a href="#">sign up</a></li>
         <li style="float:right"><a href="#">sign in</a></li>
-        <li style="float:right"><a href="#">language</a></li>
+
+        <!--<li style="float:right"><a href="#">language</a></li>-->
+        <select style="float:right; margin-top: 1.4%;" (change)="onChange()" [(ngModel)]="activeLocale">
+          <option *ngFor="let locale of locales" [value]="locale.code">
+            {{ locale.name }}
+          </option>
+        </select>
     </ul>
 
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
@@ -19,9 +25,9 @@
     <div id="sidebarMenu">
         <ul class="sidebarMenuInner">
             <!-- <li>Ani Smile<span>Animal Adopting</span></li> -->
-            <li><a href="/home">home</a></li>
+            <li><a id="home-nav" href="/home">home</a></li>
             <li><a href="/donation">donation</a></li>
-            <li><a href="/sponsorship">sponsorship</a></li>
+            <li><a class="sponsorhip" href="/sponsorship">sponsorship</a></li>
             <li><a href="/adoption">adoption</a></li>
             <li><a href="/photo-gallery">photos</a></li>
             <li><a href="/news">news</a></li>

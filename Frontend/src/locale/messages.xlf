@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="3879759311433415708" datatype="html">
+        <source>What we do</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2797361245555361494" datatype="html">
+        <source>We made it our job, to offer a All-in-one Page for people on the search for helping animals in need. Wether you are only looking to place a donation, take over a sponsorship or even adopt an animal from a shelter, you will find anything! Also all Sanctuarys, Shelters and Zoos can keep the community up-to-date via the photo gallary on our page. All the newest animals that have arrived, have found their home or meet their sponsor can be shared there! Our news section will be filled with all the news from the said places, or from news from our team! Have a look there too! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">11,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6454961491183950309" datatype="html">
+        <source>Donation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7503642048528529213" datatype="html">
+        <source> With your Donation, you help us to ensure that the animals in our care receive species-appropriate housing, care and attention for the rest of their lives. You can choose the destination of your donation from all the locations that are in partnership with us! You can even place a Donation as a gift to someone else. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">20,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7002955679222677443" datatype="html">
+        <source>Learn More</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="120235456412421791" datatype="html">
+        <source>Sponsorship</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4283536638730327537" datatype="html">
+        <source> You are on the search for doing something good, or finding the right present for that special Person? This present would be a sustainable present, that not only will this directly affect the the animal but also would warm someones heart knowing they are affecting that animals life. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">30,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4636269845200109767" datatype="html">
+        <source>Adoption</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2143573961061201594" datatype="html">
+        <source> Adopting an animal is always something so special! Have a look at all the animal shelters that are in partnership with us, to see, if there is any close to your location. If so, you can easily set an appointment to meet your new companion in person and learn more about them. Nothing can stop you now! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">38,41</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, LOCALE_ID, OnInit} from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  locales = [
+    { code: 'de-De', name: "Deutsch"},
+    { code: 'en-US', name: "English"},
+  ];
+
+  constructor(@Inject(LOCALE_ID) public activeLocale: string) {
+
+  }
+
+  onChange() {
+    window.location.href = '/${this.activeLocale}';
+  }
 
   ngOnInit(): void {
   }

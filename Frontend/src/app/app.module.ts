@@ -29,6 +29,7 @@ import { Error404Component } from './error404/error404.component';
 import { ErrorDonationComponent } from './error-donation/error-donation.component';
 import { ErrorAdoptionComponent } from './error-adoption/error-adoption.component';
 import { ErrorSponsorshipComponent } from './error-sponsorship/error-sponsorship.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -64,7 +65,8 @@ import { ErrorSponsorshipComponent } from './error-sponsorship/error-sponsorship
     MatSliderModule,
     MatButtonModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
