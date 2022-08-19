@@ -9,14 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class SponsorshipComponent implements OnInit {
 
   Location: any;
-  AnimalTyp:any;
-  Sponsorships: any;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.getLocation();
-    this.getAnimalTyp();
   }
   
 
@@ -25,17 +22,5 @@ export class SponsorshipComponent implements OnInit {
       this.Location = x;
     }
   )}
-
-  getAnimalTyp() {
-    return this.http.get("AnimalTyp").subscribe(x => {
-      this.AnimalTyp = x;
-    }
-  )}
-
-  /*putSponsorship(){
-    return this.http.post("Sponsorships").subscribe(x =>{
-      this.Sponsorships = X;
-    })
-  }*/
 
 }

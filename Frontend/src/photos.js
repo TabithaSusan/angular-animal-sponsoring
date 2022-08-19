@@ -52,7 +52,7 @@ function createRouter(db) {
   router.delete('/PhotoGallery/:Species', function (req, res, next) {
     db.query(
       'DELETE FROM PhotoGallery WHERE Species=?',
-      [req.body.Species],
+      [req.params.Titel],
       (error) => {
         if (error) {
           res.status(500).json({status: 'error'});
