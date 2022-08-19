@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DonationComponent implements OnInit {
 
-  constructor() { }
+  Facilities: any;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getFacilities();
   }
+
+  getFacilities() {
+    return this.http.get("Facilities").subscribe(x => {
+      this.Facilities = x;
+    }
+  )}
 
 }
