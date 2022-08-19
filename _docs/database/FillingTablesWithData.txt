@@ -1,0 +1,34 @@
+INSERT INTO AnimalTyp (AnimalTyp)
+VALUES ("Wolf"), ("Fox"), ("Meerket");
+
+INSERT INTO Animals (AnimalTypID, Name, Birthdate, Deathday)
+VALUES (1, "Fenrir", "2006-08-31 12:10:10", NULL), (2, "Juniper", "2009-02-05 05:02:11", NULL), (3, "Timo", "2018-08-02 16:02:55", NULL);
+
+INSERT INTO PaymentMethodCostumer (PaymentMethod)
+VALUES("Creditcard"), ("PayPal"), ("Banktransfer");
+
+INSERT INTO Countrys(Country)
+VALUES ("DE"), ("UK"), ("US");
+
+INSERT INTO Costumer (FirstName, Surname, Street, Housenumber, Zipcode, City, CountrysID, Email, HashedPassword, PaymentMethodID)
+VALUES ("Tom", "Micheal", "Musterstrasse", 25, 22445, "Musterstadt", 1, "tom@test.de", "7ab014de9bd4c3f6979e2d2b0bc4894c1f74c16936420e6d8d0c26791bbdaf02", 1),
+("Kirsten", "Smith", "Example Street", 448, 449425, "Example City", 2, "kirsten@test.co.uk", "38f69714d774e557e5843a6a714f23a9398dffa4cd94dc98bb548a0a25805484", 2),
+("Micheal", "Meyer", "Testing Street", 44786, 447891, "Testing Town", 3, "micheal@test.com", "353c8dcf9b6987f8b918482d06edd6ff8fd45e4c74a80fe5a18f92ed3e0cdfcf", 3) 
+;
+
+INSERT INTO FacilityType(FacilityTyp)
+VALUES("Animal Shelter"), ("Animal Santuary"), ("Zoo");
+
+INSERT INTO Facilities(Name, Street, Housenumber, Zipcode, City, CountriesID, FacilityTypsID)
+VALUES ("Tierheim Musterstadt", "Musterweg", 2, 22669, "Musterdorf", 1, 1),
+("Sanctuary Test", "Testing Road", 54, 88745, "Testing Town", 2, 2),
+("Zoo Example", "Example Street", 458, 454678, "Example City", 3,3)
+;
+
+INSERT INTO DonationAmounts(AmountID)
+VALUES (5), (10), (15);
+
+INSERT INTO SponsorTyp(SponsorClass, Price)
+VALUES ("Name on plaque by enclousre, quartly update on Animal including Photo.", 40),
+("Name on plaque by enclousre, quartly update on Animal including Photo. Able to choose the Name of the Animal.", 75),
+("Name on plaque by enclousre, quartly update on Animal including Photo. Able to choose the Name of the Animal. Meeting the Animal at first visit at Location.", 100);

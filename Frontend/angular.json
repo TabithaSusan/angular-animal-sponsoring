@@ -1,17 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "89a7ff4d-4d0f-4a38-b093-e3dcffaebd56"
+    "analytics": "beb37c27-5c33-4157-ab8c-753473057a48"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "angular-animal-sponsering-app": {
-      "i18n": {
-        "sourceLocale":"en-US",
-        "locales": {"de-DE": "src/locale/messages.de.xlf"
-        }
-      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -25,7 +20,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": ["de-DE"],
             "outputPath": "dist/angular-animal-sponsering-app",
             "index": "src/index.html",
             "main": "src/main.ts",
