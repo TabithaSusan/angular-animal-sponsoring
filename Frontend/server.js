@@ -1,18 +1,18 @@
- var express  = require('express'); 
- var app      = express();                               
- var path     = require('path'); 
- var mysql    = require('mysql'); 
+ var express  = require('express');
+ var app      = express();
+ var path     = require('path');
+ var mysql    = require('mysql');
  const { Console } = require('console');
 
 
- app.use(express.static(path.join(__dirname, '/dist/angular-animal-sponsering-app')));  
- 
- app.get('/', function(req,res) 
- {     
-      res.sendFile('index.html', { root: __dirname + '/dist/angular-animal-sponsering-app' });             
+ app.use(express.static(path.join(__dirname, '/dist/angular-animal-sponsering-app/')));
+
+ app.get('/', function(req,res)
+ {
+      res.sendFile('index.html', { root: __dirname + '/dist/angular-animal-sponsering-app/' });
  });
 
- app.get('/PhotoGallery', function(req,res) 
+ app.get('/PhotoGallery', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -25,13 +25,13 @@
      con.connect(function (err) {
           if (err) throw err;
           console.log("Connected!");
-      
+
 
           con.query("SELECT * FROM PhotoGallery", function (err, results, fields) {
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -41,7 +41,7 @@
      });
 });
 
-app.get('/Location', function(req,res) 
+app.get('/Location', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -59,7 +59,7 @@ app.get('/Location', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -69,7 +69,7 @@ app.get('/Location', function(req,res)
      });
 });
 
-app.get('/Animals', function(req,res) 
+app.get('/Animals', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -87,7 +87,7 @@ app.get('/Animals', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -97,7 +97,7 @@ app.get('/Animals', function(req,res)
      });
 });
 
-app.get('/AnimalTyp', function(req,res) 
+app.get('/AnimalTyp', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -115,7 +115,7 @@ app.get('/AnimalTyp', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -125,7 +125,7 @@ app.get('/AnimalTyp', function(req,res)
      });
 });
 
-app.get('/Appointments', function(req,res) 
+app.get('/Appointments', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -143,7 +143,7 @@ app.get('/Appointments', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -153,7 +153,7 @@ app.get('/Appointments', function(req,res)
      });
 });
 
-app.get('/Costumer', function(req,res) 
+app.get('/Costumer', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -171,7 +171,7 @@ app.get('/Costumer', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -181,7 +181,7 @@ app.get('/Costumer', function(req,res)
      });
 });
 
-app.get('/Countries', function(req,res) 
+app.get('/Countries', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -199,7 +199,7 @@ app.get('/Countries', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -209,7 +209,7 @@ app.get('/Countries', function(req,res)
      });
 });
 
-app.get('/DonationAmounts', function(req,res) 
+app.get('/DonationAmounts', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -227,7 +227,7 @@ app.get('/DonationAmounts', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -237,7 +237,7 @@ app.get('/DonationAmounts', function(req,res)
      });
 });
 
-app.get('/Donations', function(req,res) 
+app.get('/Donations', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -255,7 +255,7 @@ app.get('/Donations', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -265,7 +265,7 @@ app.get('/Donations', function(req,res)
      });
 });
 
-app.get('/Facilities', function(req,res) 
+app.get('/Facilities', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -283,7 +283,7 @@ app.get('/Facilities', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -293,7 +293,7 @@ app.get('/Facilities', function(req,res)
      });
 });
 
-app.get('/FacilityTyp', function(req,res) 
+app.get('/FacilityTyp', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -311,7 +311,7 @@ app.get('/FacilityTyp', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -321,7 +321,7 @@ app.get('/FacilityTyp', function(req,res)
      });
 });
 
-app.get('/PaymentMethodCostumer', function(req,res) 
+app.get('/PaymentMethodCostumer', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -339,7 +339,7 @@ app.get('/PaymentMethodCostumer', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -349,7 +349,7 @@ app.get('/PaymentMethodCostumer', function(req,res)
      });
 });
 
-app.get('/Sponsorships', function(req,res) 
+app.get('/Sponsorships', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -367,7 +367,7 @@ app.get('/Sponsorships', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
@@ -377,7 +377,7 @@ app.get('/Sponsorships', function(req,res)
      });
 });
 
-app.get('/SponsorTyp', function(req,res) 
+app.get('/SponsorTyp', function(req,res)
  {
      var con = mysql.createConnection({
           database: "22_AWD_Gruppe1",
@@ -395,7 +395,7 @@ app.get('/SponsorTyp', function(req,res)
                if (err) throw err;
                 console.log(results);
                 res.send(results);
-          
+
                 con.end(function (err) {
                   if (err) throw err;
                   console.log("Disconnected!");
