@@ -29,7 +29,7 @@
                 <br>
                 <h2 >Select to available Locations</h2>
                 <select name="animalSponsorshipLocation" id="animalSponsorshipLocation">
-                    <option *ngFor="let location of Location" value="location">{{location.LocationName}}</option>
+                    <option *ngFor="let facility of Facilities" value="facility">{{facility.Name}}</option>
                 </select>
 
                 <br>
@@ -46,14 +46,15 @@
                 <label>Name on plaque by enclousre, quartly update on Animal including Photo. Able to choose the Name of the Animal. Meeting the Animal at first visit at Location. 100.-€</label>
                 <br>
                 <br>
-                <h2>Will this be a present?</h2>
+                <br>
+                <!--<h2>Will this be a present?</h2>
                 <input type="radio" name="isPresent" id="sponsorshipPresent" value="Yes, this will be a present">
                 <label>Yes, this will be a present.</label>
                 <br>
                 <input type="radio" name="noPresent" id="sponsorshipPresent" value="No, this will be for myself">
                 <label>No, this will be for myself.</label>
                 <br>
-                <br>
+                <br> -->
                 <h2>
                     Please enter the contact Information for the Person
                 </h2>
