@@ -4,7 +4,6 @@
  var mysql    = require('mysql');
  const { Console } = require('console');
 
-
  app.use(express.static(path.join(__dirname, '/dist/angular-animal-sponsering-app/')));
 
  app.get('/', function(req,res)
