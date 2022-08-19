@@ -1,0 +1,199 @@
+/* .body {
+  position: sticky;
+  padding: 100px;
+  width: 300px;
+  margin-left: 40%;
+  display: inline-block;
+  border: none;
+  background: #F2B705;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-top: -70px;
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+  font-weight: 600;
+}
+p {
+  text-align: center;
+  color: #000000;
+  font-size: 14pt;
+
+}
+
+
+
+
+.goHome {
+  background-color: #008C8C;
+  border: none;
+  color: #f2f2f2;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px 2px;
+  margin-top: 30%;
+  margin-left: 30%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  align-items: center;
+
+}
+
+.goHome {
+  background-color: #f2f2f2;
+  color: black;
+  border: 2px solid #008C8C;
+}
+
+.goHome:hover {
+  background-color: #008C8C;
+  color: #f2f2f2;
+} */
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  font-size: 16px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+#login-box {
+  position: relative;
+  margin: 5% auto;
+  width: 800px;
+  height: 500px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+  color: #595959;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #16a085;
+  color: #16a085;
+  transition: 0.2s ease;
+}
+
+.sign-up {
+  margin-top: 50px;
+}
+
+.sign-in {
+  margin-top: 40px;
+}
+input[type="button"] {
+  /* margin-top: 28px; */
+  width: 200px;
+  height: 32px;
+  background: #16a085;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+  font-size: 11pt;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px #404040;
+  transition: 0.1s ease;
+}
+
+.line{
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  text-align: center;
+  border-left: 1px solid #595959;
+  height: 200px;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+  background: url('https://goo.gl/YbktSj');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+}
+
+.right .loginwith {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #FFF;
+  text-align: center;
+}
+
+h3, p {
+  color: #595959;
+
+}
+
+
+

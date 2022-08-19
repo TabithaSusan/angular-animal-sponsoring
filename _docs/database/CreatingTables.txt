@@ -1,0 +1,201 @@
+CREATE TABLE `22_AWD_Gruppe1`.`Costumer` (
+  `CostumerID` INT NOT NULL AUTO_INCREMENT,
+  `FirstName` VARCHAR(45) NULL,
+  `Surname` VARCHAR(45) NULL,
+  `Street` VARCHAR(45) NULL,
+  `Housenumber` VARCHAR(45) NULL,
+  `Zipcode` VARCHAR(45) NULL,
+  `City` VARCHAR(45) NULL,
+  `Country` VARCHAR(45) NULL,
+  `Email` VARCHAR(45) NULL,
+  `HashedPassword` VARCHAR(45) NULL,
+  PRIMARY KEY (`CostumerID`));
+
+CREATE TABLE `22_AWD_Gruppe1`.`FacilityType` (
+  `FacilityTypID` INT NOT NULL AUTO_INCREMENT,
+  `FacilityTyp` VARCHAR(45) NULL,
+  PRIMARY KEY (`FacilityTypID`));
+
+
+CREATE TABLE `22_AWD_Gruppe1`.`PaymentMethodCostumer` (
+  `PaymentMethodID` INT NOT NULL AUTO_INCREMENT,
+  `PaymentMethod` VARCHAR(45) NULL,
+  PRIMARY KEY (`PaymentMethodID`));
+
+ALTER TABLE `22_AWD_Gruppe1`.`Costumer` 
+ADD COLUMN `PaymentMethodID` INT NULL AFTER `HashedPassword`,
+ADD INDEX `PaymentMethodID_idx` (`PaymentMethodID` ASC);
+;
+ALTER TABLE `22_AWD_Gruppe1`.`Costumer` 
+ADD CONSTRAINT `PaymentMethodID`
+  FOREIGN KEY (`PaymentMethodID`)
+  REFERENCES `22_AWD_Gruppe1`.`PaymentMethodCostumer` (`PaymentMethodID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+CREATE TABLE `22_AWD_Gruppe1`.`AnimalTyp` (
+  `AnimalTypID` INT NOT NULL AUTO_INCREMENT,
+  `AnimalTyp` VARCHAR(45) NULL,
+  PRIMARY KEY (`AnimalTypID`));
+
+CREATE TABLE `22_AWD_Gruppe1`.`Animals` (
+  `AnimalID` INT NOT NULL AUTO_INCREMENT,
+  `AnimalTypID` INT NULL,
+  `Name` VARCHAR(45) NULL,
+  `Birthdate` DATETIME NULL,
+  `Deathday` DATETIME NULL,
+  PRIMARY KEY (`AnimalID`),
+  INDEX `AnimalTypID_idx` (`AnimalTypID` ASC),
+  CONSTRAINT `AnimalTypID`
+    FOREIGN KEY (`AnimalTypID`)
+    REFERENCES `22_AWD_Gruppe1`.`AnimalTyp` (`AnimalTypID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+CREATE TABLE `22_AWD_Gruppe1`.`DonationAmounts` (
+  `AmountID` INT NOT NULL AUTO_INCREMENT,
+  `Amount` FLOAT NULL,
+  PRIMARY KEY (`AmountID`));
+
+CREATE TABLE `22_AWD_Gruppe1`.`SponsorTyp` (
+  `SponsortTypID` INT NOT NULL AUTO_INCREMENT,
+  `SponsorClass` VARCHAR(45) NULL,
+  `Price` FLOAT NULL,
+  PRIMARY KEY (`SponsortTypID`));
+
+CREATE TABLE `22_AWD_Gruppe1`.`Countrys` (
+  `CountryID` INT NOT NULL AUTO_INCREMENT,
+  `Country` VARCHAR(45) NULL,
+  PRIMARY KEY (`CountryID`));
+
+ALTER TABLE `22_AWD_Gruppe1`.`Costumer` 
+CHANGE COLUMN `Zipcode` `Zipcode` INT NULL DEFAULT NULL ,
+CHANGE COLUMN `City` `City` INT NULL DEFAULT NULL ,
+CHANGE COLUMN `Country` `CountrysID` INT NULL DEFAULT NULL ,
+ADD INDEX `CountrysID_idx` (`CountrysID` ASC);
+;
+ALTER TABLE `22_AWD_Gruppe1`.`Costumer` 
+ADD CONSTRAINT `CountrysID`
+  FOREIGN KEY (`CountrysID`)
+  REFERENCES `22_AWD_Gruppe1`.`Countrys` (`CountryID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `22_AWD_Gruppe1`.`Costumer` 
+CHANGE COLUMN `City` `City` VARCHAR(45) NULL AFTER `PaymentMethodID`;
+
+ALTER TABLE `22_AWD_Gruppe1`.`Costumer` 
+CHANGE COLUMN `HashedPassword` `HashedPassword` VARCHAR(255) NULL DEFAULT NULL ;
+
+CREATE TABLE `22_AWD_Gruppe1`.`Facilities` (
+  `FacilityID` INT NOT NULL,
+  `Name` VARCHAR(45) NULL,
+  `Street` VARCHAR(45) NULL,
+  `Housenumber` INT NULL,
+  `Zipcode` INT NULL,
+  `City` VARCHAR(45) NULL,
+  `CountriesID` INT NULL,
+  `FacilityTypsID` INT NULL,
+  PRIMARY KEY (`FacilityID`),
+  INDEX `CountriesID_idx` (`CountriesID` ASC),
+  INDEX `FacilityTypsID_idx` (`FacilityTypsID` ASC),
+  CONSTRAINT `CountriesID`
+    FOREIGN KEY (`CountriesID`)
+    REFERENCES `22_AWD_Gruppe1`.`Countrys` (`CountryID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FacilityTypsID`
+    FOREIGN KEY (`FacilityTypsID`)
+    REFERENCES `22_AWD_Gruppe1`.`FacilityType` (`FacilityTypID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+CREATE TABLE `22_AWD_Gruppe1`.`Donations` (
+  `DonationID` INT NOT NULL,
+  `CostumerDonatedID` INT NULL,
+  `DateTime` DATETIME NULL,
+  `AmountDonatedID` INT NULL,
+  `DonatedToID` INT NULL,
+  PRIMARY KEY (`DonationID`),
+  INDEX `CostumerDonatedID_idx` (`CostumerDonatedID` ASC),
+  INDEX `AmountDonatedID_idx` (`AmountDonatedID` ASC),
+  INDEX `DonatedToID_idx` (`DonatedToID` ASC),
+  CONSTRAINT `CostumerDonatedID`
+    FOREIGN KEY (`CostumerDonatedID`)
+    REFERENCES `22_AWD_Gruppe1`.`Costumer` (`CostumerID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `AmountDonatedID`
+    FOREIGN KEY (`AmountDonatedID`)
+    REFERENCES `22_AWD_Gruppe1`.`DonationAmounts` (`AmountID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `DonatedToID`
+    FOREIGN KEY (`DonatedToID`)
+    REFERENCES `22_AWD_Gruppe1`.`Facilities` (`FacilityID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+CREATE TABLE `22_AWD_Gruppe1`.`Sponsorships` (
+  `SponsorshipID` INT NOT NULL,
+  `CostumerAsBuyerID` INT NULL,
+  `FirstName` VARCHAR(45) NULL,
+  `Surname` VARCHAR(45) NULL,
+  `AnimalLivingInID` INT NULL,
+  `AnimalsID` INT NULL,
+  PRIMARY KEY (`SponsorshipID`),
+  INDEX `CostumerAsBuyerID_idx` (`CostumerAsBuyerID` ASC),
+  INDEX `AnimalLivingInID_idx` (`AnimalLivingInID` ASC),
+  INDEX `AnimalsID_idx` (`AnimalsID` ASC),
+  CONSTRAINT `CostumerAsBuyerID`
+    FOREIGN KEY (`CostumerAsBuyerID`)
+    REFERENCES `22_AWD_Gruppe1`.`Costumer` (`CostumerID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `AnimalLivingInID`
+    FOREIGN KEY (`AnimalLivingInID`)
+    REFERENCES `22_AWD_Gruppe1`.`Facilities` (`FacilityID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `AnimalsID`
+    FOREIGN KEY (`AnimalsID`)
+    REFERENCES `22_AWD_Gruppe1`.`Animals` (`AnimalID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+CREATE TABLE `22_AWD_Gruppe1`.`Appointments` (
+  `AppointmentID` INT NOT NULL,
+  `CostumerAsAppointmentID` INT NULL,
+  `DateTime` DATETIME NULL,
+  `AppointmentInID` INT NULL,
+  PRIMARY KEY (`AppointmentID`),
+  INDEX `CostumerAsAppointmentID_idx` (`CostumerAsAppointmentID` ASC),
+  INDEX `AppointmentInID_idx` (`AppointmentInID` ASC),
+  CONSTRAINT `CostumerAsAppointmentID`
+    FOREIGN KEY (`CostumerAsAppointmentID`)
+    REFERENCES `22_AWD_Gruppe1`.`Costumer` (`CostumerID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `AppointmentInID`
+    FOREIGN KEY (`AppointmentInID`)
+    REFERENCES `22_AWD_Gruppe1`.`Facilities` (`FacilityID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+ALTER TABLE `22_AWD_Gruppe1`.`Facilities` 
+CHANGE COLUMN `FacilityID` `FacilityID` INT(11) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE `22_AWD_Gruppe1`.`SponsorTyp` 
+CHANGE COLUMN `SponsorClass` `SponsorClass` VARCHAR(255) NULL DEFAULT NULL ;
+
+ALTER TABLE `22_AWD_Gruppe1`.`Sponsorships` 
+ADD COLUMN `SponsorTypID` INT NULL AFTER `AnimalsID`,
+ADD INDEX `SponsorTypID_idx` (`SponsorTypID` ASC);
+;
+ALTER TABLE `22_AWD_Gruppe1`.`Sponsorships` 
+ADD CONSTRAINT `SponsorTypID`
+  FOREIGN KEY (`SponsorTypID`)
+  REFERENCES `22_AWD_Gruppe1`.`SponsorTyp` (`SponsortTypID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+

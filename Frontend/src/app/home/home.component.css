@@ -7,14 +7,33 @@ p {
     text-align: justify;
 }
 
-.main-p {
+img {
+    width: 100%;
+}
+
+.main {
     position: relative;
+    top: -100px;
+}
+
+.picture-header {
+    position: relative;
+    top: -140px;
+}
+
+.center {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.main-p {
     width: 80%;
 }
 
 .box {
     display: flex;
-    padding-left: 20%;
+    padding-left: 25%;
 }
 
 .donation-box {
@@ -24,6 +43,7 @@ p {
     border-width: 2px;
     margin: 10px;
     padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 .sponsorship-box {
@@ -33,6 +53,7 @@ p {
     border-width: 2px;
     margin: 10px;
     padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 .adoption-box {
@@ -42,6 +63,7 @@ p {
     border-width: 2px;
     margin: 10px;
     padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 .button {
@@ -56,9 +78,10 @@ p {
     padding: 10px;
     background-color: #008C8C;
     margin-bottom: 10px;
+    margin-left: 28%;
 }
 
 .centerbtn {
     position: relative;
-    padding: 25%;
+    padding-left: 25%;
 }
