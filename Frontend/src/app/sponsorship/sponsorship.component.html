@@ -1,111 +1,111 @@
 <body>
-    <h1>Sponsorship</h1>
-    <div class="box">
+  <h1>Sponsorship</h1>
+  <div class="box">
 
-        <div class="right">
+      <div class="right">
 
-            <img src="assets/pictures/hasmik-ghazaryan-olson-N_GrR8c2EMk-unsplash.jpg" alt="">
+          <img src="assets/pictures/hasmik-ghazaryan-olson-N_GrR8c2EMk-unsplash.jpg" alt="">
 
-        </div>
+      </div>
 
-        <div class="left">
-
-
-
-            <p>You are on the search for doing something good, or finding the right present for that special Person? This present would be a sustainable, and will directly affect the the animal but also would warm someones heart knowing they are doing something
-                for the greater good.
-                <br> With your gift sponsorship, you help us to ensure that the animals in our care receive species-appropriate housing, care and attention for the rest of their lives. Whether bear, horse, dog, monkey, parrot, pig, sheep or wild animal
-                - there is the right godmother for every animal lover. Find out more about the individual sponsored animals and sponsored projects or sign up for a sponsorship directly.
-            </p>
-
-            <form action="/success-sponsorhip">
-                <h2>
-                    Choose Animal Species you want to sponsor
-                </h2>
-                <select name="animalSpeciesSponsorship" id="animalSpeciesSponsorship">
-                <option>
-                    
-                </option>
-           </select>
-                <br>
-                <br>
-                <h2>Select to available Locations</h2>
-                <select name="animalSponsorshipLocation" id="animalSponsorshipLocation">
-                <option>
-
-                <br>
-                <br>
-                <h2>Choose Sponsorship Level</h2>
-
-                <input type="radio" name="firstLevel" id="sponsorshipLevel" value="First Level. 40,-€">
-                <label>Name on plaque by enclousre, quartly update on Animal including Photo. 40.-€</label>
-                <br>
-                <input type="radio" name="secondLevel" id="sponsorshipLevel" value="Second Level. 75,-€">
-                <label>Name on plaque by enclousre, quartly update on Animal including Photo. Able to choose the Name of the Animal. 75.-€</label>
-                <br>
-                <input type="radio" name="thirdLevel" id="sponsorshipLevel" value="Third Level. 100,-€">
-                <label>Name on plaque by enclousre, quartly update on Animal including Photo. Able to choose the Name of the Animal. Meeting the Animal at first visit at Location. 100.-€</label>
-                <br>
-                <br>
-                <h2>Will this be a present?</h2>
-                <input type="radio" name="isPresent" id="sponsorshipPresent" value="Yes, this will be a present">
-                <label>Yes, this will be a present.</label>
-                <br>
-                <input type="radio" name="noPresent" id="sponsorshipPresent" value="No, this will be for myself">
-                <label>No, this will be for myself.</label>
-                <br>
-                <br>
-                <h2>
-                    Please enter the contact Information for the Person
-                </h2>
-                <label class="labelDistanceHigh">Name</label>
-                <input type="text" name="name" id="textInput" class="firstInputInRow input-text ">
+      <div class="left">
 
 
-                <label class="labelDistanceMediumLow">Surname</label>
-                <input type="text" name="surname" id="textInput" class="input-text ">
-                <br>
 
-                <label class="labelDistanceHigh">Street</label>
-                <input type="text" name="street" id="textInput" class="firstInputInRow input-text ">
+          <p>You are on the search for doing something good, or finding the right present for that special Person? This present would be a sustainable, and will directly affect the the animal but also would warm someones heart knowing they are doing something
+              for the greater good.
+              <br> With your gift sponsorship, you help us to ensure that the animals in our care receive species-appropriate housing, care and attention for the rest of their lives. Whether bear, horse, dog, monkey, parrot, pig, sheep or wild animal
+              - there is the right godmother for every animal lover. Find out more about the individual sponsored animals and sponsored projects or sign up for a sponsorship directly.
+          </p>
 
-                <label class="labelDistanceRatherLow">Housnumber</label>
-                <input type="text" name="street" id="textInput" class="input-text ">
-                <br>
+          <form action="/success-sponsorhip">
+              <h2>
+                  Choose Animal Species you want to sponsor
+              </h2>
+              <select name="animalSpeciesSponsorship" id="animalSpeciesSponsorship">
+                  <option *ngFor="let animalTyp of AnimalTyp" value="animalTyp">{{animalTyp.AnimalTyp}}</option>
+              </select>
+              <br>
+              <br>
+              <h2 >Select to available Locations</h2>
+              <select name="animalSponsorshipLocation" id="animalSponsorshipLocation">
+                  <option *ngFor="let facility of Facilities" value="facility">{{facility.Name}}</option>
+              </select>
 
-                <label class="labelDistanceMedium">Zipcode</label>
-                <input type="number" name="zipcode" id="textInput" class="firstInputInRow input-text ">
+              <br>
+              <br>
+              <h2>Choose Sponsorship Level</h2>
 
-                <label class="labelDistanceHighTweak">City</label>
-                <input type="text" name="city" id="textInput" class="input-text ">
-                <br>
+              <input type="radio" name="firstLevel" id="sponsorshipLevel" value="First Level. 40,-€">
+              <label>Name on plaque by enclousre, quartly update on Animal including Photo. 40.-€</label>
+              <br>
+              <input type="radio" name="secondLevel" id="sponsorshipLevel" value="Second Level. 75,-€">
+              <label>Name on plaque by enclousre, quartly update on Animal including Photo. Able to choose the Name of the Animal. 75.-€</label>
+              <br>
+              <input type="radio" name="thirdLevel" id="sponsorshipLevel" value="Third Level. 100,-€">
+              <label>Name on plaque by enclousre, quartly update on Animal including Photo. Able to choose the Name of the Animal. Meeting the Animal at first visit at Location. 100.-€</label>
+              <br>
+              <br>
+              <br>
+              <!--<h2>Will this be a present?</h2>
+              <input type="radio" name="isPresent" id="sponsorshipPresent" value="Yes, this will be a present">
+              <label>Yes, this will be a present.</label>
+              <br>
+              <input type="radio" name="noPresent" id="sponsorshipPresent" value="No, this will be for myself">
+              <label>No, this will be for myself.</label>
+              <br>
+              <br> -->
+              <h2>
+                  Please enter the contact Information for the Person
+              </h2>
+              <label class="labelDistanceHigh">Name</label>
+              <input type="text" name="name" id="textInput" class="firstInputInRow input-text ">
 
-                <label class="labelDistanceLow">E-Mail Address</label>
-                <input type="email" name="email" id="textInput" class="input-text ">
-                <br>
-                <br>
-                <h2>Choose Payment Method</h2>
 
-                <input type="radio" name="visa" id="paymentMethod" value="Visa">
-                <label>Visa</label>
-                <br>
-                <input type="radio" name="paypal" id="paymentMethod" value="PayPal">
-                <label>PayPal</label>
-                <br>
-                <input type="radio" name="banktransfer" id="paymentMethod" value="Banktransfer">
-                <label>Banktransfer</label>
-                <br>
-                <br>
-                <label>Please note, that a banktranfser will take up to 5 business days to be fullfilled.</label>
+              <label class="labelDistanceMediumLow">Surname</label>
+              <input type="text" name="surname" id="textInput" class="input-text ">
+              <br>
 
-                <label>All Sponsorship Documents will be digital. There will not be any physical Documents sent to your Address. Please keep this in mind!</label>
-                <br>
-                <br>
-                <a href="/success-sponsorship" class="button">Place Sponsorship</a>
-                <!--<input type="submit" value="Place Sponsorship" class="btnSubmit">-->
+              <label class="labelDistanceHigh">Street</label>
+              <input type="text" name="street" id="textInput" class="firstInputInRow input-text ">
 
-            </form>
-        </div>
-    </div>
+              <label class="labelDistanceRatherLow">Housnumber</label>
+              <input type="text" name="street" id="textInput" class="input-text ">
+              <br>
+
+              <label class="labelDistanceMedium">Zipcode</label>
+              <input type="number" name="zipcode" id="textInput" class="firstInputInRow input-text ">
+
+              <label class="labelDistanceHighTweak">City</label>
+              <input type="text" name="city" id="textInput" class="input-text ">
+              <br>
+
+              <label class="labelDistanceLow">E-Mail Address</label>
+              <input type="email" name="email" id="textInput" class="input-text ">
+              <br>
+              <br>
+              <h2>Choose Payment Method</h2>
+
+              <input type="radio" name="visa" id="paymentMethod" value="Visa">
+              <label>Visa</label>
+              <br>
+              <input type="radio" name="paypal" id="paymentMethod" value="PayPal">
+              <label>PayPal</label>
+              <br>
+              <input type="radio" name="banktransfer" id="paymentMethod" value="Banktransfer">
+              <label>Banktransfer</label>
+              <br>
+              <br>
+              <label>Please note, that a banktranfser will take up to 5 business days to be fullfilled.</label>
+
+              <label>All Sponsorship Documents will be digital. There will not be any physical Documents sent to your Address. Please keep this in mind!</label>
+              <br>
+              <br>
+              <a href="/success-sponsorship" class="button">Place Sponsorship</a>
+              <!--<input type="submit" value="Place Sponsorship" class="btnSubmit">-->
+
+          </form>
+      </div>
+  </div>
 
 </body>

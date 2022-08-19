@@ -8,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SponsorshipComponent implements OnInit {
 
-  constructor() { }
+  Facilities: any;
+  AnimalTyp:any;
+  Sponsorships: any;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getFacilities();
+    this.getAnimalTyp();
   }
+
+  getFacilities() {
+    return this.http.get("Facilities").subscribe(x => {
+      this.Facilities = x;
+    }
+  )}
+
+  getAnimalTyp() {
+    return this.http.get("AnimalTyp").subscribe(x => {
+      this.AnimalTyp = x;
+    }
+  )}
 
 }

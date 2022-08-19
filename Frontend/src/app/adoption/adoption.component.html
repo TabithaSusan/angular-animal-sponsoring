@@ -1,79 +1,77 @@
 <body>
-    <h1>Adoption</h1>
-    <div class="box">
+  <h1>Adoption</h1>
+  <div class="box">
 
-        <div class="right">
+      <div class="right">
 
-            <img src="assets/pictures/jamie-street-wcO2PWLuQ3U-unsplash.jpg" alt="">
+          <img src="assets/pictures/jamie-street-wcO2PWLuQ3U-unsplash.jpg" alt="">
 
-        </div>
+      </div>
 
-        <div class="left">
-
-
-
-            <p>You are on the search for doing something good, or finding the right present for that special Person? This present would be a sustainable present, that not only will this directly affect the the animal but also would warm someones heart knowing
-                they are affecting that animals life.
-                <br> With your gift sponsorship, you help us to ensure that the animals in our care receive species-appropriate housing, care and attention for the rest of their lives. Whether bear, horse, dog, monkey, parrot, pig, sheep or wild animal
-                - there is the right godmother for every animal lover. Find out more about the individual sponsored animals and sponsored projects or sign up for a sponsorship directly.
-            </p>
-
-            <form action="/success-adoption">
-                <h2>
-                    Choose the shelter you want to adopt from
-                </h2>
-                <label>
-              An vast array of Avalible Shelter will be listed. If the Shelter you are looking for is not listed, a coperation with our service is not yet established.
-            </label>
-                <br>
-                <select name="shelterList" id="shelterList">
-              <option>
-      
-              </option>
-            </select>
-                <br>
-                <br>
-                <h2>Choose the date for a inperson Meeting at the Shelter</h2>
-                <label>Due to the fact that you are looking forward to adopt a animal into your family, a inperson Appointment is necessary.</label>
-                <br>
-                <input type="date" id="appointmentPicker" value="2022-07-19" min="2022-01-01" max="2060-01-01">
-                <input type="time" id="appointmentTimePicker" value="13:00" min="09:00" max="18:00">
-                <br>
-                <br>
-                <h2>
-                    Please enter the contact Information for the Person
-                </h2>
-                <label class="labelDistanceHigh">Name</label>
-                <input type="text" name="name" id="textInput" class="firstInputInRow input-text ">
+      <div class="left">
 
 
-                <label class="labelDistanceMediumLow">Surname</label>
-                <input type="text" name="surname" id="textInput" class="input-text ">
-                <br>
 
-                <label class="labelDistanceHigh">Street</label>
-                <input type="text" name="street" id="textInput" class="firstInputInRow input-text ">
+          <p>You are on the search for doing something good, or finding the right present for that special Person? This present would be a sustainable present, that not only will this directly affect the the animal but also would warm someones heart knowing
+              they are affecting that animals life.
+              <br> With your gift sponsorship, you help us to ensure that the animals in our care receive species-appropriate housing, care and attention for the rest of their lives. Whether bear, horse, dog, monkey, parrot, pig, sheep or wild animal
+              - there is the right godmother for every animal lover. Find out more about the individual sponsored animals and sponsored projects or sign up for a sponsorship directly.
+          </p>
 
-                <label class="labelDistanceRatherLow">Housnumber</label>
-                <input type="text" name="street" id="textInput" class="input-text ">
-                <br>
+          <form action="/success-adoption">
+              <h2>
+                  Choose the shelter you want to adopt from
+              </h2>
+              <label>
+            An vast array of Avalible Shelter will be listed. If the Shelter you are looking for is not listed, a coperation with our service is not yet established.
+          </label>
+              <br>
+              <select name="shelterList" id="shelterList">
+                  <option *ngFor="let facility of Facilities" value="facility">{{facility.Name}}</option>
+              </select>
+              <br>
+              <br>
+              <h2>Choose the date for a inperson Meeting at the Shelter</h2>
+              <label>Due to the fact that you are looking forward to adopt a animal into your family, a inperson Appointment is necessary.</label>
+              <br>
+              <input type="date" id="appointmentPicker" value="2022-07-19" min="2022-01-01" max="2060-01-01">
+              <input type="time" id="appointmentTimePicker" value="13:00" min="09:00" max="18:00">
+              <br>
+              <br>
+              <h2>
+                  Please enter the contact Information for the Person
+              </h2>
+              <label class="labelDistanceHigh">Name</label>
+              <input type="text" name="name" id="textInput" class="firstInputInRow input-text ">
 
-                <label class="labelDistanceMedium">Zipcode</label>
-                <input type="number" name="zipcode" id="textInput" class="firstInputInRow input-text ">
 
-                <label class="labelDistanceHighTweak">City</label>
-                <input type="text" name="city" id="textInput" class="input-text ">
-                <br>
+              <label class="labelDistanceMediumLow">Surname</label>
+              <input type="text" name="surname" id="textInput" class="input-text ">
+              <br>
 
-                <label class="labelDistanceLow">E-Mail Address</label>
-                <input type="email" name="email" id="textInput" class="input-text ">
-                <br>
-                <br>
-                <a href="/success-adoption" class="button">Place Appointment</a>
-                <!--<input type="submit" value="Place Appointment" class="btnSubmit">-->
+              <label class="labelDistanceHigh">Street</label>
+              <input type="text" name="street" id="textInput" class="firstInputInRow input-text ">
 
-            </form>
-        </div>
-    </div>
+              <label class="labelDistanceRatherLow">Housnumber</label>
+              <input type="text" name="street" id="textInput" class="input-text ">
+              <br>
+
+              <label class="labelDistanceMedium">Zipcode</label>
+              <input type="number" name="zipcode" id="textInput" class="firstInputInRow input-text ">
+
+              <label class="labelDistanceHighTweak">City</label>
+              <input type="text" name="city" id="textInput" class="input-text ">
+              <br>
+
+              <label class="labelDistanceLow">E-Mail Address</label>
+              <input type="email" name="email" id="textInput" class="input-text ">
+              <br>
+              <br>
+              <a href="/success-adoption" class="button">Place Appointment</a>
+              <!--<input type="submit" value="Place Appointment" class="btnSubmit">-->
+
+          </form>
+      </div>
+  </div>
 
 </body>
