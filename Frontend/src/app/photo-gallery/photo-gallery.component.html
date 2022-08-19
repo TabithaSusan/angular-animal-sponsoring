@@ -1,50 +1,19 @@
-<h1 class="text">Photos</h1>
+<h1>Photos</h1>
+<div class="Buttons">
+        <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/animal-shelter']">Animal Shelter</button>
+        <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/animal-sanctuary']">Animal Sanctuary</button>
+        <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/zoo']">Zoo</button>
+</div>
 
-<p>fbuwienompü <br>
-    rctzvubinm<br>
-    ctzvubino
-</p>
+<div class="text">
+  <div class="pictures">
+    
+    <div *ngFor="let photo of PhotoGallery" class="pic">       
+              <div><img alt={{photo.Species}} src="{{photo.Pic}}" style="width:240px "><br>
+              {{photo.Species}}<br>
+              {{photo.Location}}<br>
+              {{photo.Likes}}</div>       
+    </div>
 
-/*
-
-<div class="container-fluid">
-  <div class=Buttons>
-      <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/animal-shelter']">Animal Shelter</button>
-      <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/animal-sanctuary']">Animal Sanctuary</button>
-      <button type="button" class="btn btn-primary" id="Button" [routerLink]="['/zoo']">Zoo</button>
   </div>
-  
-  <p>fbuwienompü <br>
-    rctzvubinm<br>
-    ctzvubino
-  </p>
-  <div *ngFor="let photo of PhotoGallery">    
-    <table>
-      <tr>
-        <td id="spalte1"> 
-            <img alt={{photo.Species}} src="{{photo.Pic}}" align="left" style="padding-right: 10px; width:240px "> 
-            <p>{{photo.Species}}</p>
-            <p>{{photo.Location}}</p>
-            <p>{{photo.Likes}}</p>
-        </td>
-        <td id="spalte2">
-        <!--  <h3> {{}} </h3>
-          <h4> {{}} </h4>
-          <article>{{}}</article> -->
-        </td>
-        <td id="spalte3">
-          <h2>;-P</h2> 
-          <!-- <p id = ""> {{}} </p>
-          <h2> Früher: </h2>
-          <p id = ""> {{}} </p>  -->
-          <button type="button" class="btn btn-primary">;-P</button></td>
-        </tr>
-    </table> 
-  </div>
-
-
-  <p>fbuwienompü <br>
-    rctzvubinm<br>
-    ctzvubino
-  </p>
 </div>

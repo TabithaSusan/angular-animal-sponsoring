@@ -1,14 +1,14 @@
 const express = require('express');
 
-function createRouter(db) {
+function createRouter7(db) {
   const router = express.Router();
   const owner = '';
 
   
-  router.post('/PhotoGallery', (req, res, next) => {
+  router.post('/Countries', (req, res, next) => {
     db.query(
-      'INSERT INTO PhotoGallery VALUES(?, ?, ?, ?, ?, ?, ?)',
-      [req.body.ID, req.body.Species, req.body.Location, req.body.Likes, req.body.Pic, req.body.Tag1, req.body.Tag2],
+      'INSERT INTO Countries VALUES(?, ?)',
+      [req.body.CountryID, req.body.Country],
       (error) => {
         if (error) {
           console.error(error);
@@ -20,9 +20,9 @@ function createRouter(db) {
     );
   });
 
-  router.get('/PhotoGallery', function (req, res, next) {
+  router.get('/Countries', function (req, res, next) {
     db.query(
-      'SELECT * FROM PhotoGallery',  // ORDER BY Species',
+      'SELECT * FROM Countries',  // ORDER BY Species',
       [10*(req.params.page || 0)],
       (error, results) => {
         if (error) {
@@ -35,10 +35,10 @@ function createRouter(db) {
     );
   });
   
-  router.put('/PhotoGallery/:Species', function (req, res, next) {
+  router.put('/Countries/:CountryID', function (req, res, next) {
     db.query(
-      'UPDATE PhotoGallery SET ID=?, Species=?, Location=?, Likes=?, Pic=?, Tag1=?, Tag2=? WHERE Species=?',
-      [req.body.ID, req.body.Species, req.body.Location, req.body.Likes, req.body.Pic, req.body.Tag1, req.body.Tag2],
+      'UPDATE Countries SET Country=? WHERE CountryID=?',
+      [req.body.CountryID, req.body.Country],
       (error) => {
         if (error) {
           res.status(500).json({status: 'error'});
@@ -49,10 +49,10 @@ function createRouter(db) {
     );
   });
 
-  router.delete('/PhotoGallery/:Species', function (req, res, next) {
+  router.delete('/Countries/:CountryID', function (req, res, next) {
     db.query(
-      'DELETE FROM PhotoGallery WHERE Species=?',
-      [req.body.Species],
+      'DELETE FROM Countries WHERE CountryID=?',
+      [req.body.CountryID],
       (error) => {
         if (error) {
           res.status(500).json({status: 'error'});
@@ -66,4 +66,4 @@ function createRouter(db) {
   return router;
 }
 
-module.exports = createRouter;
+module.exports = createRouter7;

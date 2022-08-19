@@ -23,10 +23,8 @@
                     Choose Animal Species you want to sponsor
                 </h2>
                 <select name="animalSpeciesSponsorship" id="animalSpeciesSponsorship">
-                <option>
-                    
-                </option>
-           </select>
+                    <option *ngFor="let animalTyp of AnimalTyp" value="animalTyp">{{animalTyp.AnimalTyp}}</option>
+                </select>
                 <br>
                 <br>
                 <h2 >Select to available Locations</h2>

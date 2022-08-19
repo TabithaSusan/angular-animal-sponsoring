@@ -1,14 +1,14 @@
 const express = require('express');
 
-function createRouter(db) {
+function createRouter9(db) {
   const router = express.Router();
   const owner = '';
 
   
-  router.post('/PhotoGallery', (req, res, next) => {
+  router.post('/Donations', (req, res, next) => {
     db.query(
-      'INSERT INTO PhotoGallery VALUES(?, ?, ?, ?, ?, ?, ?)',
-      [req.body.ID, req.body.Species, req.body.Location, req.body.Likes, req.body.Pic, req.body.Tag1, req.body.Tag2],
+      'INSERT INTO Donations VALUES(?, ?, ?, ?, ?)',
+      [req.body.DonationID, req.body.CostumerDonatedID, req.body.DateTime, req.body.AmountDonatedID, req.body.DonatedToID],
       (error) => {
         if (error) {
           console.error(error);
@@ -20,9 +20,9 @@ function createRouter(db) {
     );
   });
 
-  router.get('/PhotoGallery', function (req, res, next) {
+  router.get('/Donations', function (req, res, next) {
     db.query(
-      'SELECT * FROM PhotoGallery',  // ORDER BY Species',
+      'SELECT * FROM Donations',  // ORDER BY Species',
       [10*(req.params.page || 0)],
       (error, results) => {
         if (error) {
@@ -35,10 +35,10 @@ function createRouter(db) {
     );
   });
   
-  router.put('/PhotoGallery/:Species', function (req, res, next) {
+  router.put('/Donations/:DonationID', function (req, res, next) {
     db.query(
-      'UPDATE PhotoGallery SET ID=?, Species=?, Location=?, Likes=?, Pic=?, Tag1=?, Tag2=? WHERE Species=?',
-      [req.body.ID, req.body.Species, req.body.Location, req.body.Likes, req.body.Pic, req.body.Tag1, req.body.Tag2],
+      'UPDATE Costumer SET CostumerDonatedID=?, DateTime=?, AmountDonatedID=?, DonatedToID=? WHERE DonationID=?',
+      [req.body.DonationID, req.body.CostumerDonatedID, req.body.DateTime, req.body.AmountDonatedID, req.body.DonatedToID],
       (error) => {
         if (error) {
           res.status(500).json({status: 'error'});
@@ -49,10 +49,10 @@ function createRouter(db) {
     );
   });
 
-  router.delete('/PhotoGallery/:Species', function (req, res, next) {
+  router.delete('/Donations/:DonationID', function (req, res, next) {
     db.query(
-      'DELETE FROM PhotoGallery WHERE Species=?',
-      [req.body.Species],
+      'DELETE FROM Donations WHERE DonationID=?',
+      [req.body.DonationID],
       (error) => {
         if (error) {
           res.status(500).json({status: 'error'});
@@ -66,4 +66,4 @@ function createRouter(db) {
   return router;
 }
 
-module.exports = createRouter;
+module.exports = createRouter9;

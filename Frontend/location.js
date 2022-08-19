@@ -52,7 +52,7 @@ function createRouter2(database) {
   router.delete('/Location/:LocationName', function (req, res, next) {
     database.query(
       'DELETE FROM Location WHERE LocationName=?',
-      [req.params.Titel],
+      [req.body.LocationName],
       (error) => {
         if (error) {
           res.status(500).json({status: 'error'});
