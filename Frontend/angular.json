@@ -7,6 +7,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular-animal-sponsering-app": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "de-De": "src/locales/messages.de.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,6 +26,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": [
+              "de-DE"
+            ],
             "outputPath": "dist/angular-animal-sponsering-app",
             "index": "src/index.html",
             "main": "src/main.ts",
