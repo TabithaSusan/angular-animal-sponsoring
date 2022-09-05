@@ -1,0 +1,13 @@
+.header-title {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+}
+
+.main {
+  position: sticky;
+  margin-top: 300px;
+  margin-bottom: 120px;
+  padding-left: 10%;
+  padding-right: 10%;
+}

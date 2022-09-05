@@ -22,4 +22,10 @@ export class AdoptionComponent implements OnInit {
     }
   )}
 
+  getFacilities() {
+    return this.http.get("Facilities").subscribe(x => {
+      this.Facilities = x;
+    }
+  )}
+
 }

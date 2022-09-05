@@ -18,7 +18,7 @@ export class SponsorshipComponent implements OnInit {
     this.getFacilities();
     this.getAnimalTyp();
   }
-   
+
   getFacilities() {
     return this.http.get("Facilities").subscribe(x => {
       this.Facilities = x;
