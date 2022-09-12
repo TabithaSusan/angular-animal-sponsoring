@@ -8,24 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DonationComponent implements OnInit {
 
-  Facilities: any;
 
-  constructor(private http: HttpClient) { }
+Facilities: any;
 
-  ngOnInit(): void {
-    this.getFacilities();
+constructor(private http: HttpClient) { }
+
+ngOnInit(): void {
+  this.getFacilities();
+}
+
+getFacilities() {
+  return this.http.get("Facilities").subscribe(x => {
+    this.Facilities = x;
   }
-  
-  getFacilities() {
-    return this.http.get("Facilities").subscribe(x => {
-      this.Facilities = x;
-    }
-  )}
-
-  getFacilities() {
-    return this.http.get("Facilities").subscribe(x => {
-      this.Facilities = x;
-    }
-  )}
+)}
 
 }

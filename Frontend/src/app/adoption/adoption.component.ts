@@ -15,12 +15,6 @@ export class AdoptionComponent implements OnInit {
   ngOnInit(): void {
     this.getFacilities();
   }
-  
-  getFacilities() {
-    return this.http.get("Facilities WHERE FacilityTypsID = 1").subscribe(x => {
-      this.Facilities = x;
-    }
-  )}
 
   getFacilities() {
     return this.http.get("Facilities").subscribe(x => {

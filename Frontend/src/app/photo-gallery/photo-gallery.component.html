@@ -9,7 +9,7 @@
   <div class="pictures">
     
     <div *ngFor="let photo of PhotoGallery" class="pic">       
-              <div><img alt={{photo.Species}} src="{{photo.Pic}}" style="width:240px "><br>
+              <div class="np"><img alt={{photo.Species}} src="{{photo.Pic}}" style="width:240px "><br>
               {{photo.Species}}<br>
               {{photo.Location}}<br>
               <img src="assets/pictures/heart.png" alt=""> {{photo.Likes}}</div>       
